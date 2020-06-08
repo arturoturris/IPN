@@ -11,7 +11,6 @@ import java.util.logging.Logger;
 public class Empleado {
     UserSession session;
     
-    
     public Empleado(UserSession session){
         this.session = session;
     }

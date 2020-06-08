@@ -1,6 +1,7 @@
-package controller;
+package controller.empleado;
 
 import config.Controller;
+import controller.Launcher;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Date;
@@ -10,10 +11,11 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Empleado;
-import view.EmpleadosForm;
-import view.EmpleadosView;
+import view.empleado.EmpleadosForm;
+import view.empleado.EmpleadosView;
 
 public class EmpleadosFormController extends Controller implements ActionListener{
+    //CONTROLLER TO CREATE FORM
     public EmpleadosFormController(EmpleadosForm view){
         super(view);
         
@@ -21,6 +23,7 @@ public class EmpleadosFormController extends Controller implements ActionListene
         view.btnRegistrar.addActionListener(this);
     }
     
+    //CONTROLLER TO MODIFY FORM
     public EmpleadosFormController(EmpleadosForm view,int idEmpleado){
         super(view);
         
@@ -106,7 +109,7 @@ public class EmpleadosFormController extends Controller implements ActionListene
             JOptionPane.showMessageDialog(this.view, message, "Error #006", JOptionPane.ERROR_MESSAGE);
         }else{
             String message = "El empleado se modificó exitosamente.";
-            JOptionPane.showMessageDialog(this.view, message, "Registro exitoso", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this.view, message, "Modificación exitosa", JOptionPane.INFORMATION_MESSAGE);
         }
         
         return success;

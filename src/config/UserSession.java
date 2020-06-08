@@ -10,6 +10,7 @@ public class UserSession{
     private final String user;
     private final String password;
     private int idEmpleado;
+    private String tipoSesion;
     private Connection connection;
     
     public UserSession(String url, String user, String password){
@@ -17,6 +18,7 @@ public class UserSession{
         this.user= user;
         this.password = password;
         this.idEmpleado = -1;
+        this.tipoSesion = null;
     }
     
     public static boolean authorizeLogin(UserSession session,String user, String password){
@@ -95,5 +97,13 @@ public class UserSession{
     
     public int getIdEmpleado(){
         return this.idEmpleado;
+    }
+
+    public String getTipoSesion() {
+        return tipoSesion;
+    }
+
+    public void setTipoSesion(String tipoSesion) {
+        this.tipoSesion = tipoSesion;
     }
 }

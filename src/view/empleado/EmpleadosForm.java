@@ -1,4 +1,4 @@
-package view;
+package view.empleado;
 
 import javax.swing.SpinnerNumberModel;
 
@@ -36,12 +36,6 @@ public class EmpleadosForm extends javax.swing.JPanel {
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         lblTitulo = new javax.swing.JLabel();
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
-        Botones = new javax.swing.JPanel();
-        filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
-        btnRegistrar = new javax.swing.JButton();
-        filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
-        btnCancelar = new javax.swing.JButton();
-        filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         jPanel2 = new javax.swing.JPanel();
         filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         Campos = new javax.swing.JPanel();
@@ -78,6 +72,12 @@ public class EmpleadosForm extends javax.swing.JPanel {
         cmbEstado = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
         filler7 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
+        Botones = new javax.swing.JPanel();
+        filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
+        btnRegistrar = new javax.swing.JButton();
+        filler5 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
+        btnCancelar = new javax.swing.JButton();
+        filler4 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -89,18 +89,6 @@ public class EmpleadosForm extends javax.swing.JPanel {
         lblTitulo.setText("REGISTRO DE EMPLEADO");
         Titulo.add(lblTitulo);
         Titulo.add(filler2);
-
-        Botones.setOpaque(false);
-        Botones.setLayout(new javax.swing.BoxLayout(Botones, javax.swing.BoxLayout.X_AXIS));
-        Botones.add(filler3);
-
-        btnRegistrar.setText("Registrar");
-        Botones.add(btnRegistrar);
-        Botones.add(filler5);
-
-        btnCancelar.setText("Cancelar");
-        Botones.add(btnCancelar);
-        Botones.add(filler4);
 
         jPanel2.setOpaque(false);
         jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.X_AXIS));
@@ -272,6 +260,18 @@ public class EmpleadosForm extends javax.swing.JPanel {
 
         jPanel2.add(Campos);
         jPanel2.add(filler7);
+
+        Botones.setOpaque(false);
+        Botones.setLayout(new javax.swing.BoxLayout(Botones, javax.swing.BoxLayout.X_AXIS));
+        Botones.add(filler3);
+
+        btnRegistrar.setText("Registrar");
+        Botones.add(btnRegistrar);
+        Botones.add(filler5);
+
+        btnCancelar.setText("Cancelar");
+        Botones.add(btnCancelar);
+        Botones.add(filler4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

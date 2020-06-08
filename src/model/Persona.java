@@ -10,10 +10,63 @@ import java.util.logging.Logger;
 
 public class Persona {
     UserSession session;
+    String nombre;
+    String paterno;
+    String materno;
+    char sexo;
     
     public Persona(UserSession session){
         this.session = session;
     }
+
+    public Persona(){
+        this.nombre = null;
+        this.paterno = null;
+        this.materno = null;
+        this.sexo = 'H';
+    }
+    
+    public UserSession getSession() {
+        return session;
+    }
+
+    public void setSession(UserSession session) {
+        this.session = session;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getPaterno() {
+        return paterno;
+    }
+
+    public void setPaterno(String paterno) {
+        this.paterno = paterno;
+    }
+
+    public String getMaterno() {
+        return materno;
+    }
+
+    public void setMaterno(String materno) {
+        this.materno = materno;
+    }
+
+    public char getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
+    }
+    
+    
     
     public static void main(String []args){
         UserSession tmpSession = new UserSession("jdbc:mysql://localhost:3306/ipn","root","");

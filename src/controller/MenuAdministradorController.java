@@ -1,10 +1,15 @@
 package controller;
 
+import controller.empleado.EmpleadosController;
 import config.Controller;
+import controller.cliente.ClientesController;
+import controller.productoservicio.ProductosServiciosController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import view.EmpleadosView;
+import view.empleado.EmpleadosView;
 import view.MenuAdministradorView;
+import view.cliente.ClientesView;
+import view.productoservicio.ProductosServiciosView;
 
 public class MenuAdministradorController extends Controller implements ActionListener{
     
@@ -12,6 +17,8 @@ public class MenuAdministradorController extends Controller implements ActionLis
         super(view);
         
         view.btnEmpleados.addActionListener(this);
+        view.btnClientes.addActionListener(this);
+        view.btnProductosServicios.addActionListener(this);
     }
     
     private MenuAdministradorView getOriginalView(){
@@ -24,6 +31,14 @@ public class MenuAdministradorController extends Controller implements ActionLis
         
         if(source == getOriginalView().btnEmpleados){
             Launcher.ac.changeController(new EmpleadosController(new EmpleadosView()));
+        }
+        
+        else if(source == getOriginalView().btnClientes){
+            Launcher.ac.changeController(new ClientesController(new ClientesView()));
+        }
+        
+        else if(source == getOriginalView().btnProductosServicios){
+            Launcher.ac.changeController(new ProductosServiciosController(new ProductosServiciosView()));
         }
     }
     

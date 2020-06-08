@@ -1,6 +1,8 @@
-package controller;
+package controller.empleado;
 
 import config.Controller;
+import controller.Launcher;
+import controller.MenuAdministradorController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
@@ -11,9 +13,10 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Empleado;
-import view.EmpleadosForm;
-import view.EmpleadosView;
+import view.empleado.EmpleadosForm;
+import view.empleado.EmpleadosView;
 import view.MenuAdministradorView;
+import view.empleado.EmpleadoInfo;
 
 public class EmpleadosController extends Controller implements ActionListener{
     Empleado model;
@@ -83,7 +86,7 @@ public class EmpleadosController extends Controller implements ActionListener{
         int columnIndex = getOriginalView().tblEmpleados.getColumn("Id Empleado").getModelIndex();
         int idEmpleado = Integer.parseInt((String)getOriginalView().tblEmpleados.getValueAt(selectedRow, columnIndex));
         
-        Launcher.ac.changeController(new EmpleadosFormController(new EmpleadosForm(EmpleadosForm.formType.UPDATE),idEmpleado));
+        Launcher.ac.changeController(new EmpleadosInfoController(new EmpleadoInfo(),idEmpleado));
     }
     
     private void btnEliminarPushed(){

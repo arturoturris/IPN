@@ -18,6 +18,7 @@ import view.LoginView;
 public class Launcher implements ActionListener {
     private final LoginView view;
     public static AdministradorController ac;
+    public static EmpleadoController ec;
     public static UserSession session;
     
     public Launcher(){
@@ -79,11 +80,12 @@ public class Launcher implements ActionListener {
                 JOptionPane.showMessageDialog(panel, message, "Error #003", JOptionPane.ERROR_MESSAGE);
             }
             session.setIdEmpleado(idEmpelado);
+            session.setTipoSesion(tipoEmpleado);
             
             if(tipoEmpleado.equals("Administrador")){
                 ac = new AdministradorController();
-            }else{
-            
+            }else if(tipoEmpleado.equals("Empleado")){
+                ec = new EmpleadoController();
             }
             
             view.dispose();
