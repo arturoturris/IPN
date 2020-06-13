@@ -14,7 +14,7 @@ public class AdministradorController {
     public AdministradorController(){
         mainView = new MainLayout();
         mainView.setTitle("Impulsando Tu Negocio (ADMINISTRADOR)");
-        mainView.setSize(720, 480);
+        mainView.setSize(820, 480);
         mainView.setLocationRelativeTo(null);
         changeController(new MenuAdministradorController(new MenuAdministradorView()));
         mainView.setVisible(true);

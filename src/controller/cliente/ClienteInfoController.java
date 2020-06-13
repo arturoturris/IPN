@@ -2,14 +2,18 @@ package controller.cliente;
 
 import config.Controller;
 import controller.Launcher;
+import controller.documento.DocumentosController;
 import controller.negocio.NegociosController;
+import controller.recibo.RecibosController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import model.Cliente;
 import view.cliente.ClienteInfo;
 import view.cliente.ClientesView;
+import view.documento.DocumentosView;
 import view.negocio.NegociosView;
+import view.recibo.RecibosView;
 
 public class ClienteInfoController extends Controller implements ActionListener{
     private final String rfcCliente;
@@ -49,7 +53,19 @@ public class ClienteInfoController extends Controller implements ActionListener{
         
         //PRINTING negocio *******
         NegociosController nc = new NegociosController(new NegociosView(),this.rfcCliente);
-        v.Negocios.add(nc.getView());
+        //v.Negocios.add(nc.getView());
+        v.Modulos.addTab("Negocios", nc.getView());
+        
+        //PRINTING RECIBOS *******
+        RecibosController rc = new RecibosController(new RecibosView(),this.rfcCliente,2);
+        //v.Negocios.add(rc.getView());
+        v.Modulos.addTab("Recibos", rc.getView());
+        
+        //PRINTING DOCUMENTOS *****
+        DocumentosController dc = new DocumentosController(new DocumentosView(),2);
+        //v.Negocios.add(dc.getView());
+        v.Modulos.addTab("Documentos", dc.getView());
+        
     }
     
     private void btnRegresarPushed(){

@@ -186,6 +186,7 @@ public class Cliente extends Persona{
                 return read;
             }
             
+            this.persona_id = result.getInt("Persona_Id");
             this.nombre = result.getString("Nombre");
             this.paterno = result.getString("Paterno");
             this.materno = result.getString("Materno");

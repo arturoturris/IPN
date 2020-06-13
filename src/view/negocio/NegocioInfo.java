@@ -74,7 +74,7 @@ public class NegocioInfo extends javax.swing.JPanel {
         Titulo.add(filler2);
 
         Info.setOpaque(false);
-        Info.setLayout(new java.awt.GridLayout(7, 2, 0, 10));
+        Info.setLayout(new java.awt.GridLayout(7, 2, 20, 10));
 
         jPanel2.setOpaque(false);
         jPanel2.setLayout(new java.awt.GridLayout(1, 2, 5, 10));

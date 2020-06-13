@@ -1,16 +1,14 @@
 package controller;
 
-import controller.empleado.EmpleadosController;
 import config.Controller;
 import controller.cliente.ClientesController;
-import controller.productoservicio.ProductosServiciosController;
+import controller.documento.DocumentosController;
 import controller.recibo.RecibosController;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import view.empleado.EmpleadosView;
 import view.MenuEmpleadoView;
 import view.cliente.ClientesView;
-import view.productoservicio.ProductosServiciosView;
+import view.documento.DocumentosView;
 import view.recibo.RecibosView;
 
 public class MenuEmpleadoController extends Controller implements ActionListener{
@@ -31,6 +29,10 @@ public class MenuEmpleadoController extends Controller implements ActionListener
         Launcher.ec.changeController(new ClientesController(new ClientesView()));
     }
     
+    private void btnDocumentacionPushed(){
+        Launcher.ec.changeController(new DocumentosController(new DocumentosView(),1));
+    }
+    
     private void btnRecibosPushed(){
         Launcher.ec.changeController(new RecibosController(new RecibosView()));
     }
@@ -44,7 +46,7 @@ public class MenuEmpleadoController extends Controller implements ActionListener
         }
         
         else if(source == getOriginalView().btnDocumentacion){
-            
+            btnDocumentacionPushed();
         }
         
         else if(source == getOriginalView().btnRecibos){

@@ -199,7 +199,7 @@ public class Negocio {
             created = (ps.executeUpdate() > 0);
 
         } catch (SQLException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Negocio.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         return created;
@@ -236,7 +236,7 @@ public class Negocio {
             this.horario = result.getString("Horario");
             this.coordenadas = result.getString("Coordenadas");
         } catch (SQLException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Negocio.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         return read;
@@ -275,7 +275,7 @@ public class Negocio {
                 negocios.add(tmpNegocio);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(Empleado.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Negocio.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         return negocios;
@@ -305,7 +305,7 @@ public class Negocio {
             
             updated = (ps.executeUpdate() > 0);
         } catch (SQLException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Negocio.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         return updated;
@@ -322,7 +322,7 @@ public class Negocio {
             
             deleted = (ps.executeUpdate() > 0);
         } catch (SQLException ex) {
-            Logger.getLogger(Persona.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Negocio.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         return deleted;

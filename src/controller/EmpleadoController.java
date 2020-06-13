@@ -13,7 +13,7 @@ public class EmpleadoController {
     public EmpleadoController(){
         mainView = new MainLayout();
         mainView.setTitle("Impulsando Tu Negocio (EMPLEADO)");
-        mainView.setSize(720, 480);
+        mainView.setSize(820, 480);
         mainView.setLocationRelativeTo(null);
         changeController(new MenuEmpleadoController(new MenuEmpleadoView()));
         mainView.setVisible(true);

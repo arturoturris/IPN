@@ -97,6 +97,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
         <Property name="columns" type="int" value="2"/>
+        <Property name="horizontalGap" type="int" value="20"/>
         <Property name="rows" type="int" value="7"/>
         <Property name="verticalGap" type="int" value="10"/>
       </Layout>

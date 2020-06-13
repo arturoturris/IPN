@@ -31,9 +31,10 @@ public class ClienteInfo extends javax.swing.JPanel {
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
         jLabel1 = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
+        jPanel2 = new javax.swing.JPanel();
         Botones = new javax.swing.JPanel();
         btnRegresar = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        filler3 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         Info = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
@@ -55,7 +56,9 @@ public class ClienteInfo extends javax.swing.JPanel {
         txtFechaActualizacion = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         txtComentarios = new javax.swing.JTextField();
-        Negocios = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        MasInfo = new javax.swing.JPanel();
+        Modulos = new javax.swing.JTabbedPane();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -68,15 +71,20 @@ public class ClienteInfo extends javax.swing.JPanel {
         Titulo.add(jLabel1);
         Titulo.add(filler1);
 
+        jPanel2.setOpaque(false);
+        jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.LINE_AXIS));
+
+        Botones.setOpaque(false);
         Botones.setLayout(new javax.swing.BoxLayout(Botones, javax.swing.BoxLayout.Y_AXIS));
 
         btnRegresar.setText("Regresar");
         Botones.add(btnRegresar);
+        Botones.add(filler3);
 
-        jPanel2.setOpaque(false);
+        jPanel2.add(Botones);
 
         Info.setOpaque(false);
-        Info.setLayout(new java.awt.GridLayout(5, 2, 20, 10));
+        Info.setLayout(new java.awt.GridLayout(0, 4, 20, 10));
 
         jLabel2.setText("Nombre:");
         Info.add(jLabel2);
@@ -168,19 +176,13 @@ public class ClienteInfo extends javax.swing.JPanel {
         txtComentarios.setOpaque(false);
         Info.add(txtComentarios);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Info, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Info, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        jPanel2.add(Info);
 
-        Negocios.setOpaque(false);
-        Negocios.setLayout(new java.awt.GridLayout(1, 1));
+        MasInfo.setOpaque(false);
+        MasInfo.setLayout(new javax.swing.BoxLayout(MasInfo, javax.swing.BoxLayout.Y_AXIS));
+        MasInfo.add(Modulos);
+
+        jScrollPane1.setViewportView(MasInfo);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -189,12 +191,9 @@ public class ClienteInfo extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Negocios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 785, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Botones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jScrollPane1)
+                    .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -203,11 +202,9 @@ public class ClienteInfo extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Botones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Negocios, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -216,11 +213,13 @@ public class ClienteInfo extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Botones;
     private javax.swing.JPanel Info;
-    public javax.swing.JPanel Negocios;
+    public javax.swing.JPanel MasInfo;
+    public javax.swing.JTabbedPane Modulos;
     private javax.swing.JPanel Titulo;
     public javax.swing.JButton btnRegresar;
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
+    private javax.swing.Box.Filler filler3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -233,6 +232,7 @@ public class ClienteInfo extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTextField txtCelular;
     public javax.swing.JTextField txtComentarios;
     public javax.swing.JTextField txtContraseña;
