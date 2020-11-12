@@ -1,6 +1,8 @@
 # AP-IPN
 Proyecto final Administración Proyectos - IPN
 
+Vídeo de funcionamiento: https://drive.google.com/file/d/1_fGCJ9VnXEAq5HbESu6j53dmPQtrJf44/view?usp=sharing
+
 ## Requerimientos
 - JDK 14
 - Apache Netbeans 11.3 (u otro IDE)
