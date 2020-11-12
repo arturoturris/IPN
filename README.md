@@ -5,6 +5,7 @@ Proyecto final Administración Proyectos - IPN
 - JDK 14
 - Apache Netbeans 11.3 (u otro IDE)
 - XAMPP
+Nota: Las dependencias del proyecto se encuentran en dist/lib
 
 ## Instalación de BD (XAMPP)
 
