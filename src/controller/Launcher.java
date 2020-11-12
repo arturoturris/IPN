@@ -45,7 +45,7 @@ public class Launcher implements ActionListener {
             return;
         }
         
-        UserSession tmpSession = new UserSession("jdbc:mysql://localhost:3306/ipn","user","user");
+        UserSession tmpSession = new UserSession("jdbc:mysql://localhost:3306/ipn","root","");
         
         //ERROR WHILE CONNECTING
         if(!tmpSession.connect()){
