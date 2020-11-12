@@ -32,3 +32,10 @@ En caso de contar con un nombre de usuario y contraseña para el servidor MySql:
 4. Dirigirse a la linea ~48 y poner el usuario y contraseña de su usuario en MySql
 5. Dirigirse a la linea ~77 y poner el usuario y contraseña de su usuario en MySql
 6. Limpiar y reconstruir el proyecto
+
+## Usuarios de prueba
+
+|Tipo|Usuario|Contraseña|
+|----|-------|----------|
+|Administrador|AdminArturo|1234|
+|Empleado|EmpleadoArturo|1234|
