@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/arturoturris/AP-IPN.svg?branch=master)](https://travis-ci.com/arturoturris/AP-IPN)
+
 # AP-IPN
 Proyecto final Administración Proyectos - IPN
 
