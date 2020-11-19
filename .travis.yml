@@ -1,5 +1,9 @@
+dist: bionic
 language: java
 jdk:
   - oraclejdk14
-
-script: ant -Dplatforms.JDK_14.home=<path_to_JDK_home> jar
+  
+addons:
+  apt:
+    packages:
+      - ant
