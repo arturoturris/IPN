@@ -1,6 +1,2 @@
-dist: xenial
 language: java
-addons:
-  apt:
-    packages:
-      - ant
+jdk: oraclejdk14
