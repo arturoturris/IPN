@@ -10,8 +10,6 @@ Vídeo de funcionamiento: https://drive.google.com/file/d/1_fGCJ9VnXEAq5HbESu6j5
 - Apache Netbeans 11.3 (u otro IDE)
 - XAMPP
 
-Nota: Las dependencias del proyecto se encuentran en dist/lib
-
 ## Instalación de BD (XAMPP)
 
 1. Descargar el archivo "ipn.sql"
