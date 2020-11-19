@@ -2,4 +2,4 @@ language: java
 jdk:
   - oraclejdk14
 
-script: ant -Duser.properties.file=<path_to_property_file> jar
+script: ant -Dplatforms.JDK_14.home=<path_to_JDK_home> jar
