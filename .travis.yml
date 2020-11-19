@@ -1,2 +1,6 @@
+dist: xenial
 language: java
-install: ant deps
+addons:
+  apt:
+    packages:
+      - ant
