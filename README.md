@@ -2,6 +2,7 @@
 
 # AP-IPN
 Proyecto final Administración Proyectos - IPN
+Adición de calidad con la materia de Control de Calidad de Software
 
 Vídeo de funcionamiento: https://drive.google.com/file/d/1_fGCJ9VnXEAq5HbESu6j53dmPQtrJf44/view?usp=sharing
 
