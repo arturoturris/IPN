@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.com/arturoturris/AP-IPN.svg?branch=master)](https://travis-ci.com/arturoturris/AP-IPN)
 
 # AP-IPN
-Proyecto final Administración Proyectos - IPN
-Adición de calidad con la materia de Control de Calidad de Software
+-Administración de Proyectos - Proyecto final
+-Control de Calidad de Software - Trabajo del curso (adición de calidad)
 
 Vídeo de funcionamiento: https://drive.google.com/file/d/1_fGCJ9VnXEAq5HbESu6j53dmPQtrJf44/view?usp=sharing
 
